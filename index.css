@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: none;
+  margin: none;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        max-width: 1440px;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+  li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 18px;
+    font-family: 'Barlow';
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+  }
+  .hero {
+    width: 100vw;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+  }
+  ul {
+    display: flex;
+  }
+  .aboutLink {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+  }
+  .servicesLink {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  .projectsLink {   
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+  }
+  .logo {
+    scale: 1.6;
+  }
+  .navlinks {
+    display: flex;
+    align-items: center;
+  }
+  .navcta {
+    margin: 0 0.9rem;
+    padding: 1.1rem;
+    border-radius: 30px;
+    font-family: 'Fraunces';
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 1.4s;
+  }
+  .navcta:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .primaryFocus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .heading {
+    margin-top: 70px;
+    font-family: 'Fraunces';
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 10px;
+    display: block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes fadeInDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  .arrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDrop 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+  .arrow-down {
+    animation: bounce 1s infinite alternate;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px)
+    }
+  }
+  .mainContent {
+    width: 100vw;
+  }
+  .blockOne {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .blockOne > .textArea {
+    width: 50%;
+    padding: 0 9rem;
+  }
+  .blockOne > .textArea > h2{
+    font-family: 'Fraunces';
+    font-size: 3rem;
+  }
+  .blockOne > .textArea > p {
+    font-family: 'Barlow';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(232, 10%, 55%);
+    line-height: 30px;
+  }
+  .blockOne > .imageContainer {
+    width: 50%;
+  }
+  .blockOne img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+  .blockOne a {
+    text-decoration: none;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    color: black;
+    line-height: 60px;
+  }
+}
