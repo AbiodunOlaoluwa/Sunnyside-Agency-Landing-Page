@@ -51,11 +51,26 @@ body {
   ul {
     display: flex;
   }
+  @keyframes hover {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-7px);  
+        opacity: 1;  
+    }
+  }
+
   .aboutLink {
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeInDrop 1s ease-in-out forwards;
     animation-delay: 0.8s;
+  }
+  .aboutLink:hover {
+    cursor: pointer;
+    animation: hover 0.5s ease-in-out infinite alternate;
   }
   .servicesLink {
     opacity: 0;
@@ -63,11 +78,19 @@ body {
     animation: fadeInDrop 1s ease-in-out forwards;
     animation-delay: 1s;
   }
+  .servicesLink:hover {
+    cursor: pointer;
+    animation: hover 0.5s ease-in-out infinite alternate;
+  }
   .projectsLink {   
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeInDrop 1s ease-in-out forwards;
     animation-delay: 1.2s;
+  }
+  .projectsLink:hover {
+    cursor: pointer;
+    animation: hover 0.5s ease-in-out infinite alternate;
   }
   .logoContainer {
     display: flex;
