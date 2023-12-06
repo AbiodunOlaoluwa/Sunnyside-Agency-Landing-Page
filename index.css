@@ -261,7 +261,9 @@ body {
     border-radius: 10px;
     z-index: -1;
   }
-  
+  .highlight-effect-yellow:hover::after {
+    background-color: hsl(51, 100%, 49%);
+  }
   .blockTwo {
     width: 100vw;
     display: flex;
@@ -318,6 +320,9 @@ body {
     transform: translateX(-5px);
     border-radius: 10px;
     z-index: -1;
+  }
+  .highlight-effect-red:hover::after {
+    background-color: hsl(7, 99%, 70%);
   }
   .blockThree {
     width: 100vw;
@@ -452,6 +457,11 @@ body {
   font-weight: 600;
   font-size: 1.1;
   }
+  .footerTextContainer p:hover {
+    filter: contrast(2);
+    color: white;
+    cursor: pointer;
+  }
   .socialsContainer {
     filter: brightness(0.6);
     display: flex;
@@ -461,5 +471,30 @@ body {
     margin: 50px;
     margin-bottom: 70px;
     scale: 1.05;
+  }
+  .socialsContainer svg:hover {
+    cursor: pointer;
+  }
+  .socialsContainer svg:hover path{
+    fill: hsl(0, 0%, 100%);
+  }
+  .attribution {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: hsl(210, 4%, 67%);
+    color: white;
+    font-family: 'Barlow';
+  }
+  .attribution a {
+    font-weight: 900;
+    font-family: 'Fraunces';
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+  }
+  .attribution a:hover {
+    color: hsl(213, 9%, 39%);
   }
 }
