@@ -66,3 +66,95 @@
   </div>
 </body>
 </html>
+
+
+CSS:
+@media only screen and (max-width: 1169px) {
+  /* Hide the navigation menu by default */
+  nav ul {
+    display: none;
+  }
+
+  /* Hamburger menu styling */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 15px;
+    margin: 15px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Styling for the expanded menu */
+  .expanded {
+    display: block;
+  }
+
+  .expanded ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 80px; /* Adjust the top value as needed */
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px;
+  }
+
+  .expanded ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .expanded ul li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .expanded ul li a:hover {
+    color: hsl(51, 100%, 49%);
+  }
+}
+
+HTML:
+
+<!-- Add the hamburger menu icon -->
+<button class="hamburger" onclick="toggleMenu()">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</button>
+
+<nav class="expanded">
+  <!-- Include your navigation links here -->
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
+JS: 
+
+function toggleMenu() {
+  var nav = document.querySelector('.expanded ul');
+  nav.classList.toggle('active');
+}
+

@@ -14,6 +14,10 @@ body {
   /* max-width: 1440px; */
 }
 
+@media only screen and (max-width:1169px) {
+    /*mobile version of code*/
+}
+
 @media only screen and (min-width: 1170px) {
     body {
         padding: 0;
@@ -21,7 +25,6 @@ body {
         display: flex;
         width: 100vw;
         height: 100vh;
-        /* overflow: hidden; */
     }
     body::-webkit-scrollbar {
         display: none;
@@ -227,7 +230,7 @@ body {
   }
   .blockOne img {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
   }
